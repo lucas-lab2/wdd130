@@ -1,0 +1,22 @@
+// The "display: inline;" CSS property value makes the element generate an inline-level box.
+// This means the element will be laid out in a line, without breaking the flow of the content.
+// Inline elements do not start on a new line and only take up as much width as necessary.
+display: inline;
+
+// The "display: block;" CSS property value makes the element generate a block-level box.
+// This means the element will start on a new line and take up the full width available.
+// Block elements can have width and height set, and they respect top and bottom margins.
+display: block;
+
+// The "display: inline-block;" CSS property value makes the element generate a block-level box that flows inline with text.
+// This means the element will be laid out in a line, but it can have width and height set.
+// Inline-block elements do not start on a new line and only take up as much width as necessary.
+display: inline-block;
+
+// The "text-align: center;" CSS property value centers the inline content of a block-level element.
+// This means the text and inline elements inside the block element will be centered horizontally.
+text-align: center;
+
+// The "margin: 0 auto;" CSS property value centers a block-level element horizontally.
+// This means the element will have zero margin on the top and bottom, and the left and right margins will be set to auto, centering the element within its container.
+margin: 0 auto;
