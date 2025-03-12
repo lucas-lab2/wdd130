@@ -2,22 +2,28 @@
     background-color: #1f3b75;
     color: white;
     border: 1px solid #ccc;
-    width: 500px;
+    max-width: 500px;
     padding: 20px;
-    position: relative;
+    position: absolute;
 }
 
 .callout img {
 	float: right;
-    border: 3px solid white;
+    border: 1px solid white;
     border-radius: 5px;
     margin-left: 10px;
 }
 
 blockquote {
-	text-align: center;
+	margin: 0;
+    font-size: 16px;
+    font-style: italic;
 }
 
 cite {
-	
+    display: block;
+	text-align: right;
+    font-style: italic;
+    color: #dcdcdc;
+    margin-top: 10px;
 }
