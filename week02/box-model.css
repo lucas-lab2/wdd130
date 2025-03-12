@@ -26,4 +26,7 @@ cite {
     font-style: italic;
     color: #dcdcdc;
     margin-top: 10px;
+    border-top: 1px solid #dcdcdc;
+    padding-top: 5px;
+    
 }
