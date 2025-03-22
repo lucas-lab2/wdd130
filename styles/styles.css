@@ -1,3 +1,9 @@
+:root {
+    --main-bg-color: #f0f0f0;
+    --main-text-color: #333;
+    --main-link-color: darkblue;
+    --main-width: 200px;
+}
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -17,7 +23,7 @@ main {
 }
 
 main img {
-    width: 200px;
+    width: var(--main-width);
     height: auto;
     border: 1px solid black;
     padding: 2px;
@@ -38,7 +44,7 @@ aside {
 }
 
 aside img {
-    width: 200px;
+    width: var(--main-width);
     height: auto;
 }
 
