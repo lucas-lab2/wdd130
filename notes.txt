@@ -16,3 +16,10 @@ The class can be selected by using period (.) notation.
 
 #A id attribute can only be applied to one element per document and each element may only have one id. 
 The id can be selected by CSS id selector using hash (#) notation.
+
+#It is recommended that you start with the following CSS declaration for all of your work in this class to help control the aspect ratio of images.
+
+img {
+  width: 100%;
+  height: auto;
+}
