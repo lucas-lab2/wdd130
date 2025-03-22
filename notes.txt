@@ -1,0 +1,18 @@
+#A CSS rule's selector is the first part of the rule that tells the browser which HTML elements should have the CSS property values applied. 
+The elements selected by the selector are referred to as the subject of the selector.
+
+CSS Selector Types:
+
+Selector Type	Example	CSS Rule Application
+Universal	* { ... }	Applies to all elements
+Type	h1 { ... }	Applies to all <h1> elements
+Class	.red { ... }	Applies to all elements with the "red" class value
+ID	#red { ... }	Applies to the one element with the "red" id value
+
+
+#A class attribute can be applied to many elements on a document.
+More than one class can be applied to a single element. 
+The class can be selected by using period (.) notation.
+
+#A id attribute can only be applied to one element per document and each element may only have one id. 
+The id can be selected by CSS id selector using hash (#) notation.
