@@ -65,13 +65,13 @@
      4. Hero Section
      ========================== */
   .hero {
-    position: relative; /* needed for absolute positioning of children */
-    margin-bottom: 2rem; /* space after hero */
+    position: relative; 
+    margin-bottom: 2rem; 
   }
   
   .hero > img {
     display: block;
-    width: 100%; /* fills container width */
+    width: 100%; 
     height: auto;
   }
   
@@ -92,14 +92,14 @@
     left: 5%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 1rem;
-    width: 300px; /* adjust as needed */
+    width: 300px; 
   }
   
   /* Float the small image in the article to the right */
   .hero > article img {
     float: right;
     margin: 0 0 1rem 1rem;
-    width: 100px; /* adjust as needed */
+    width: 100px;
     height: auto;
   }
   
@@ -121,7 +121,7 @@
   
   /* Rafting images in the second section */
   section img {
-    max-width: 200px; /* or your desired size */
+    max-width: 200px;
     margin: 0.5rem;
     border: 2px solid var(--accent1-color);
   }
@@ -143,5 +143,4 @@
     height: auto;
     margin: 0 0.5rem;
   }
-  
   
