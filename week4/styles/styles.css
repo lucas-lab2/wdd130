@@ -15,8 +15,9 @@ body {
   section {
     zoom: 0.8;
     display: flex;
-    flex-direction: column; /* the default value for the 'display: flex' is 'row'. By using 'column' the elements will be 
-    organized in block*/
+    flex-flow: row wrap;
+    /* flex-direction: column; the default value for the 'display: flex' is 'row'. By using 'column' the elements will be 
+    organized in block */
 } 
   article {
     padding: 10px;
