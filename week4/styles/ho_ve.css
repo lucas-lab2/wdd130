@@ -8,8 +8,8 @@ body {
     height: 100px;
     border: 1px solid black;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: center; /*The flex items are positioned at the center (horital and vertical aligned) of the cross-axis by setting the align-items property to center */
+    justify-content: space-around; /*justify-content controls where the flex items sit on the main axis.*/
   }
   button {
     font-size: 18px;
