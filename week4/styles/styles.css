@@ -23,5 +23,6 @@ body {
     padding: 10px;
     margin: 10px;
     background: aqua;
+    flex: 1; /*This is a unitless proportion value that dictates how much available space along the main axis each flex item will take up compared to other flex items. */
   }
   /* Add your flexbox CSS below here */
