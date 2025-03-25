@@ -16,3 +16,6 @@ body {
     line-height: 1.5;
     width: 15%;
   }
+  button:first-child {
+    order: 1; /*The order property controls the order in which flex items appear in the flex container.*/
+  }
