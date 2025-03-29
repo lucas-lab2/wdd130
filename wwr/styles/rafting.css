@@ -51,11 +51,17 @@
     width: auto;
   }
   
+  nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns nav items to the right */
+    gap: 1rem; /* Space between nav items */
+  }
+
   /* Navigation Links */
   nav a {
     color: #fff;
     text-decoration: none;
-    margin-left: 1rem;
+    padding: 0.5rem;
   }
   
   nav a:hover {
@@ -66,8 +72,9 @@
      4. Hero Section
      ========================== */
   .hero {
-    position: relative; 
-    margin-bottom: 2rem; 
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
   }
   
   .hero > img {
@@ -77,31 +84,26 @@
   }
   
   /* Absolutely position the h1 on top of the hero image */
-  .hero > h1 {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    color: #fff;
+  .hero h1 {
+    margin-bottom: 1rem;
+    color: var(--accent2-color);
     font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
   }
   
   /* Article also absolutely positioned on top of the hero image */
-  .hero > article {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem;
-    width: 300px; 
+  .hero p{
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
   }
-  
   /* Float the small image in the article to the right */
-  .hero > article img {
-    float: right;
-    margin: 0 0 1rem 1rem;
-    width: 100px;
+  .hero img {
+    max-width: 80%;
     height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--accent1-color);
+    border-radius: 10px;
   }
   
   /* ==========================
