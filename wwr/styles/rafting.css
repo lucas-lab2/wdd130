@@ -107,28 +107,38 @@
   }
   
   /* ==========================
-     5. Sections
+     5. History Sections
      ========================== */
-  section {
-    margin: 2rem 1rem;
-  }
-  
-  section h2 {
+  .history {
+  padding: 2rem 1rem;
+}
+  .history h2 {
     color: var(--accent2-color);
-    margin-bottom: 0.5rem;
-  }
-  
-  section p {
+    text-align: center;
     margin-bottom: 1rem;
   }
-  
-  /* Rafting images in the second section */
-  section img {
-    max-width: 200px;
-    margin: 0.5rem;
+
+  .history-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .history-content img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
     border: 2px solid var(--accent1-color);
   }
-  
+  .history-content p {
+    flex: 1;
+    max-width: 600px;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
   /* ==========================
      6. Footer
      ========================== */
