@@ -2,14 +2,15 @@
    1. CSS Variables ( :root )
    ========================== */
    :root {
-    --primary-color: #CEE397;   /* Background or main color */
-    --secondary-color: #008148; /* Text or accent color */
-    --accent1-color: #007991;   /* Additional accent color */
-    --accent2-color: #008148;   /* Can be the same as secondary if desired */
+    --dark-blue: #0C5B8F;        /* For headings and nav text */
+    --light-blue: #E6F0FA;       /* Soft baby-blue background */
+    --accent-color: #46AACE;     /* Optional accent color */
+    --text-color: #333;          /* General text color */
+    --white: #fff;
   }
   
   /* ==========================
-     2. Basic Reset & Global Styles
+     2. Basic Reset & Global
      ========================== */
   * {
     margin: 0;
@@ -19,146 +20,177 @@
   
   body {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    line-height: 1.4;
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
+    background-color: var(--light-blue);
+    color: var(--text-color);
     margin: 0 auto;
     max-width: 1200px;
+    line-height: 1.5;
   }
   
-  /* Headings using Winky Sans */
+  /* Headings: bigger, same color, etc. */
   h1, h2 {
     font-family: "Winky Sans", sans-serif;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Make headings bigger for better visibility */
+  h1 {
+    font-size: 2.5rem; /* Adjust as needed */
+  }
+  
+  h2 {
+    font-size: 2rem;   /* Adjust as needed */
+  }
+  
+  /* All images rounded corners */
+  img {
+    border-radius: 10px;
   }
   
   /* ==========================
-     3. Header (CSS Grid)
+     3. Header & Navigation
      ========================== */
   header {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Top navigation bar */
+  .topnav {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: var(--accent1-color);
+    background-color: var(--white);
+    padding: 0.5rem 1rem;
   }
   
   /* Logo styling */
-  header .logo img {
+  .topnav .logo img {
     height: 60px;
     width: auto;
   }
   
-  /* Navigation using CSS Flex */
+  /* Nav links: bigger text, horizontal layout */
   nav {
     display: flex;
-    justify-content: flex-end;
     gap: 1rem;
   }
   
   nav a {
-    color: #fff;
+    font-size: 1.1rem; /* Make the nav bigger */
+    color: var(--dark-blue);
     text-decoration: none;
     padding: 0.5rem;
+    transition: background-color 0.2s;
   }
   
   nav a:hover {
-    text-decoration: underline;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: 5px;
   }
   
   /* ==========================
-     4. Hero Section
+     4. Hero Area
      ========================== */
   .hero {
+    position: relative; /* So we can absolutely position the overlay text/article */
     text-align: center;
-    padding: 2rem 1rem;
-    background-color: #f9f9f9;
+    overflow: hidden;   /* Ensures no overflow from child elements */
   }
   
-  .hero h1 {
-    margin-bottom: 1rem;
-    color: var(--accent2-color);
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    max-width: 600px;
-    margin: 0 auto 1.5rem auto;
-  }
-  
+  /* Hero image (full width) */
   .hero img {
-    max-width: 80%;
+    width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
-    border: 2px solid var(--accent1-color);
+    /* border-radius already applied globally if needed, but you can do an exception if you want a square corner for the hero. */
+  }
+  
+  /* Hero heading over the image */
+  .hero h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent-color);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  }
+  
+  /* Article overlay box */
+  .hero article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(24, 63, 104, 0.7); /* Dark overlay color with opacity */
+    color: var(--white);
+    padding: 1rem;
+    width: 300px;
+    border-radius: 10px;
   }
   
   /* ==========================
      5. History Section
      ========================== */
   .history {
+    background-color: var(--white);
     padding: 2rem 1rem;
+    margin: 1rem 0;
   }
   
   .history h2 {
-    color: var(--accent2-color);
     text-align: center;
     margin-bottom: 1rem;
   }
   
-  /* Layout the history content side-by-side */
-  .history-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
+  /* Place the "Happy client" image inline in the paragraph using the class .inline-img if you like */
+  .history p {
+    margin-bottom: 1rem;
+    text-align: justify; /* Optional for better text flow */
   }
   
-  .history-content img {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    border: 2px solid var(--accent1-color);
-  }
-  
-  .history-content p {
-    flex: 1;
-    max-width: 600px;
-    line-height: 1.6;
-    padding: 0 1rem;
+  .history .inline-img {
+    float: right; /* or left, if you prefer */
+    margin: 0 0 1rem 1rem;
+    width: 250px; /* Adjust as needed */
   }
   
   /* ==========================
-     6. Adventure Section (CSS Grid for Figures)
+     6. Adventure Section
      ========================== */
   .adventure {
+    background-color: var(--white);
     padding: 2rem 1rem;
+    margin: 1rem 0;
     text-align: center;
   }
   
   .adventure h2 {
-    color: var(--accent2-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   
-  /* Use CSS Grid to layout five images horizontally */
+  /* Use a responsive grid for images */
   .adventure-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
     justify-items: center;
+    align-items: start;
   }
   
   .adventure-images figure {
+    width: 100%; /* ensures images scale within the grid column */
+    max-width: 200px;
     margin: 0;
+    text-align: center;
   }
   
   .adventure-images img {
     width: 100%;
     height: auto;
-    border: 2px solid var(--accent1-color);
+    display: block;
   }
   
   .adventure-images figcaption {
@@ -174,16 +206,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--white);
+    color: var(--dark-blue);
     padding: 1rem;
-    background-color: var(--accent1-color);
-    color: #fff;
+    margin-top: 1rem;
+    border-top: 2px solid var(--accent-color);
   }
   
   footer p {
     margin: 0;
   }
   
-  /* Social media icons arranged to the right */
   footer .social {
     display: flex;
     gap: 0.5rem;
@@ -192,5 +225,6 @@
   footer .social a img {
     width: 30px;
     height: auto;
+    display: block;
   }
   
