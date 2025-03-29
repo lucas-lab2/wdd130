@@ -168,6 +168,7 @@
     gap: 1rem;
     align-items: center;
     text-align: justify;
+    justify-items: center;
   }
   .history-grid p {
     padding: 0 1rem;
