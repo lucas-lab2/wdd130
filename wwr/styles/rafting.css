@@ -252,28 +252,45 @@
   /* ==========================
      8. Responsive Adjustments
      ========================== */
-  @media (max-width: 768px) {
-    /* Stack nav items if needed */
-    nav {
-      justify-content: center;
+     @media (max-width: 768px) {
+      /* Stack nav items if needed */
+      nav {
+        justify-content: center;
+      }
+    
+      /* Hero overlay stacks text & image vertically */
+      .hero-overlay {
+        flex-direction: column;
+        width: 90%; /* Increase width for better mobile view */
+        padding: 1.5rem; /* Add padding for better spacing */
+      }
+      .hero-text {
+        text-align: center;
+      }
+    
+      /* History grid becomes single column */
+      .history-grid {
+        grid-template-columns: 1fr;
+      }
+      .history-grid p, .history-grid img {
+        text-align: center;
+        padding: 0;
+      }
+      .history-img {
+        margin: 1rem auto; /* Add margin for spacing */
+      }
+    
+      /* Adventure images wrap and adjust spacing */
+      .adventure-images figure {
+        max-width: 100%; /* Make images take full width on mobile */
+        margin-bottom: 1rem; /* Add margin for spacing between images */
+      }
+    
+      /* Adjust overall padding and margins */
+      body {
+        padding: 0 1rem; /* Add padding to the body for better spacing */
+      }
+      header, main, footer {
+        padding: 1rem; /* Adjust padding for these sections */
+      }
     }
-  
-    /* Hero overlay stacks text & image vertically */
-    .hero-overlay {
-      flex-direction: column;
-      width: 80%;     /* or 90%, as you prefer */
-    }
-    .hero-text {
-      text-align: center;
-    }
-  
-    /* History grid becomes single column */
-    .history-grid {
-      grid-template-columns: 1fr;
-    }
-    .history-grid p, .history-grid img {
-      text-align: center;
-      padding: 0;
-    }
-  }
-  
