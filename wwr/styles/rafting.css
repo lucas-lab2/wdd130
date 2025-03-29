@@ -2,62 +2,60 @@
    1. CSS Variables ( :root )
    ========================== */
    :root {
-    --primary-color: #CEE397;   /* background or main color */
-    --secondary-color: #008148; /* text or accent color */
-    --accent1-color: #007991;   /* additional accent color */
-    --accent2-color: #008148;   /* can be the same as secondary if desired */
+    --primary-color: #CEE397;   /* Background or main color */
+    --secondary-color: #008148; /* Text or accent color */
+    --accent1-color: #007991;   /* Additional accent color */
+    --accent2-color: #008148;   /* Can be the same as secondary if desired */
   }
   
-  /* Basic Reset */
+  /* ==========================
+     2. Basic Reset & Global Styles
+     ========================== */
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* ==========================
-     2. Body and Global Styles
-     ========================== */
   body {
-    font-family: "Roboto", sans-serif; /* Body font */
+    font-family: "Roboto", sans-serif;
     font-size: 1rem;
     line-height: 1.4;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     margin: 0 auto;
-    max-width: 1200px; /* Optional page width constraint */
+    max-width: 1200px;
   }
   
-  /* Headings that use Winky Sans */
+  /* Headings using Winky Sans */
   h1, h2 {
     font-family: "Winky Sans", sans-serif;
   }
   
   /* ==========================
-     3. Header
+     3. Header (CSS Grid)
      ========================== */
   header {
     display: grid;
-    grid-template-columns: auto 1fr; /* Logo and nav */
-    background-color: var(--accent1-color);
-    padding: 1rem;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--accent1-color);
   }
   
-  /* Logo in the header */
+  /* Logo styling */
   header .logo img {
-    height: 60px; /* Adjust to your liking */
+    height: 60px;
     width: auto;
   }
   
+  /* Navigation using CSS Flex */
   nav {
     display: flex;
-    justify-content: flex-end; /* Aligns nav items to the right */
-    gap: 1rem; /* Space between nav items */
+    justify-content: flex-end;
+    gap: 1rem;
   }
-
-  /* Navigation Links */
+  
   nav a {
     color: #fff;
     text-decoration: none;
@@ -77,86 +75,82 @@
     background-color: #f9f9f9;
   }
   
-  .hero > img {
-    display: block;
-    width: 100%; 
-    height: auto;
-  }
-  
-  /* Absolutely position the h1 on top of the hero image */
   .hero h1 {
     margin-bottom: 1rem;
     color: var(--accent2-color);
     font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
   }
   
-  /* Article also absolutely positioned on top of the hero image */
-  .hero p{
+  .hero p {
     max-width: 600px;
     margin: 0 auto 1.5rem auto;
   }
-  /* Float the small image in the article to the right */
+  
   .hero img {
     max-width: 80%;
     height: auto;
     display: block;
     margin: 0 auto;
     border: 2px solid var(--accent1-color);
-    border-radius: 10px;
   }
   
   /* ==========================
-     5. History Sections
+     5. History Section
      ========================== */
   .history {
-  padding: 2rem 1rem;
-}
+    padding: 2rem 1rem;
+  }
+  
   .history h2 {
     color: var(--accent2-color);
     text-align: center;
     margin-bottom: 1rem;
   }
-
+  
+  /* Layout the history content side-by-side */
   .history-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     gap: 1rem;
+    align-items: center;
     justify-content: center;
   }
-
+  
   .history-content img {
     max-width: 300px;
     width: 100%;
     height: auto;
-    border-radius: 10px;
     border: 2px solid var(--accent1-color);
   }
+  
   .history-content p {
     flex: 1;
     max-width: 600px;
     line-height: 1.6;
     padding: 0 1rem;
   }
-    /* ==========================
+  
+  /* ==========================
      6. Adventure Section (CSS Grid for Figures)
      ========================== */
   .adventure {
-    padding: 2rem 1 rem;
+    padding: 2rem 1rem;
     text-align: center;
   }
+  
   .adventure h2 {
     color: var(--accent2-color);
     margin-bottom: 1rem;
   }
-   
+  
+  /* Use CSS Grid to layout five images horizontally */
   .adventure-images {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
     justify-items: center;
   }
+  
   .adventure-images figure {
     margin: 0;
   }
@@ -172,31 +166,31 @@
     font-style: italic;
     font-size: 0.9rem;
   }
-
-
+  
   /* ==========================
      7. Footer
      ========================== */
-     footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-      background-color: var(--accent1-color);
-      color: #fff;
-    }
-    
-    footer p {
-      margin: 0;
-    }
-    
-    /* Social media icons arranged to the right */
-    footer .social {
-      display: flex;
-      gap: 0.5rem;
-    }
-    
-    footer .social a img {
-      width: 30px;
-      height: auto;
-    }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--accent1-color);
+    color: #fff;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Social media icons arranged to the right */
+  footer .social {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  footer .social a img {
+    width: 30px;
+    height: auto;
+  }
+  
