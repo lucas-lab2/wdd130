@@ -119,19 +119,18 @@
   /* Hero overlay article arranged side by side */
   .hero-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translateX(-50%);
     background-color: rgba(24, 63, 104, 0.7);
     color: var(--white);
-    padding: 1rem;
-    width: 60%;
-    max-width: 600px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 800px;
     border-radius: 10px;
     display: flex;
-    flex-direction: row;
+    gap: 1.5rem;
     align-items: center;
-    gap: 1rem;
+    top: 50%; 
   }
   
   
@@ -252,45 +251,73 @@
   /* ==========================
      8. Responsive Adjustments
      ========================== */
-     @media (max-width: 768px) {
-      /* Stack nav items if needed */
-      nav {
-        justify-content: center;
-      }
-    
-      /* Hero overlay stacks text & image vertically */
+    @media (max-width: 768px) {
       .hero-overlay {
         flex-direction: column;
-        width: 90%; /* Increase width for better mobile view */
-        padding: 1.5rem; /* Add padding for better spacing */
+        top: 60%;
+        padding: 1.2rem;
+        width: 94%;
       }
+    
       .hero-text {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        line-height: 1.4;
         text-align: center;
       }
     
-      /* History grid becomes single column */
-      .history-grid {
-        grid-template-columns: 1fr;
-      }
-      .history-grid p, .history-grid img {
-        text-align: center;
-        padding: 0;
-      }
-      .history-img {
-        margin: 1rem auto; /* Add margin for spacing */
+      .hero-img {
+        width: 60%;
+        max-width: 200px;
+        margin: 0 auto;
       }
     
-      /* Adventure images wrap and adjust spacing */
-      .adventure-images figure {
-        max-width: 100%; /* Make images take full width on mobile */
-        margin-bottom: 1rem; /* Add margin for spacing between images */
-      }
-    
-      /* Adjust overall padding and margins */
-      body {
-        padding: 0 1rem; /* Add padding to the body for better spacing */
-      }
-      header, main, footer {
-        padding: 1rem; /* Adjust padding for these sections */
+      .hero-img img {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: cover;
       }
     }
+    
+    /* Small Mobile Optimization */
+@media (max-width: 768px) {
+  .hero-overlay {
+    flex-direction: column;
+    top: 60%;
+    padding: 1.2rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    order: -1; /* Move image above text on mobile */
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    object-fit: cover;
+  }
+
+  .hero-text {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay {
+    top: 55%;
+    width: 94%;
+  }
+
+  .hero-img {
+    max-width: 200px;
+  }
+
+  .hero-text {
+    font-size: clamp(0.85rem, 3.8vw, 1rem);
+  }
+}
