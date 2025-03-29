@@ -10,7 +10,7 @@
   }
   
   /* ==========================
-     2. Basic Reset & Global
+     2. Basic Reset & Global Styles
      ========================== */
   * {
     margin: 0;
@@ -27,14 +27,13 @@
     line-height: 1.5;
   }
   
-  /* Headings: bigger, same color, etc. */
+  /* Headings: uniform color and larger sizes */
   h1, h2 {
     font-family: "Winky Sans", sans-serif;
     color: var(--dark-blue);
     margin-bottom: 0.5rem;
   }
   
-  /* Make headings bigger for better visibility */
   h1 {
     font-size: 2.5rem; /* Adjust as needed */
   }
@@ -43,7 +42,7 @@
     font-size: 2rem;   /* Adjust as needed */
   }
   
-  /* All images rounded corners */
+  /* All images with rounded corners */
   img {
     border-radius: 10px;
   }
@@ -56,29 +55,29 @@
     margin-bottom: 1rem;
   }
   
-  /* Top navigation bar */
+  /* Top navigation bar using CSS Grid for logo and nav */
   .topnav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     background-color: var(--white);
     padding: 0.5rem 1rem;
   }
   
-  /* Logo styling */
   .topnav .logo img {
     height: 60px;
     width: auto;
   }
   
-  /* Nav links: bigger text, horizontal layout */
+  /* Navigation using Flex for horizontal layout */
   nav {
     display: flex;
+    justify-content: flex-end;
     gap: 1rem;
   }
   
   nav a {
-    font-size: 1.1rem; /* Make the nav bigger */
+    font-size: 1.1rem; /* Bigger nav text */
     color: var(--dark-blue);
     text-decoration: none;
     padding: 0.5rem;
@@ -95,40 +94,46 @@
      4. Hero Area
      ========================== */
   .hero {
-    position: relative; /* So we can absolutely position the overlay text/article */
+    position: relative;
     text-align: center;
-    overflow: hidden;   /* Ensures no overflow from child elements */
+    overflow: hidden;
   }
   
-  /* Hero image (full width) */
   .hero img {
     width: 100%;
     height: auto;
     display: block;
-    /* border-radius already applied globally if needed, but you can do an exception if you want a square corner for the hero. */
   }
   
-  /* Hero heading over the image */
   .hero h1 {
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
     color: var(--accent-color);
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   }
   
-  /* Article overlay box */
-  .hero article {
+  /* Hero overlay article with happy-client image */
+  .hero-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(24, 63, 104, 0.7); /* Dark overlay color with opacity */
+    background-color: rgba(24, 63, 104, 0.7);
     color: var(--white);
     padding: 1rem;
     width: 300px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero-overlay img {
+    width: 100%;
+    height: auto;
   }
   
   /* ==========================
@@ -145,16 +150,17 @@
     margin-bottom: 1rem;
   }
   
-  /* Place the "Happy client" image inline in the paragraph using the class .inline-img if you like */
-  .history p {
-    margin-bottom: 1rem;
-    text-align: justify; /* Optional for better text flow */
+  /* Use a grid to position [Paragraph] [Image] [Paragraph] */
+  .history-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    text-align: justify;
   }
   
-  .history .inline-img {
-    float: right; /* or left, if you prefer */
-    margin: 0 0 1rem 1rem;
-    width: 250px; /* Adjust as needed */
+  .history-grid p {
+    padding: 0 1rem;
   }
   
   /* ==========================
@@ -168,10 +174,11 @@
   }
   
   .adventure h2 {
+    text-align: center; /* Ensure the title is centered */
     margin-bottom: 1.5rem;
   }
   
-  /* Use a responsive grid for images */
+  /* Responsive grid layout for adventure images */
   .adventure-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -181,7 +188,7 @@
   }
   
   .adventure-images figure {
-    width: 100%; /* ensures images scale within the grid column */
+    width: 100%;
     max-width: 200px;
     margin: 0;
     text-align: center;
