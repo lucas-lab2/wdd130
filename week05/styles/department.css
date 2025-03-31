@@ -10,9 +10,17 @@ table {
     caption-side: bottom;
     padding: 10px;
     font-weight: bold;
+    font-style: italic;
   }
   
-  thead,
+  thead {
+    background-color: rgb(17, 17, 17);
+  }
+    thead th {
+        color: white;
+        text-align: left;
+    }
+
   tfoot {
     background-color: rgb(228 240 245);
   }
