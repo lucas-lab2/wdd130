@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact White Water Rafting for inquiries, reservations, and website suggestions. Reach out to our team for more information on our adventures.">
+  <meta name="author" content="Lucas Miranda">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Water Rafting - Contact Us</title>
+  <!-- Preconnect and Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Adding the typography fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+  <!-- Header (unchanged) -->
+  <header>
+    <div class="topnav">
+      <div class="logo">
+        <img src="./images/logo.png" alt="White Water Rafting Logo">
+      </div>
+      <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+
+    <!-- Hero area -->
+    <div class="hero">
+      <img src="./images/hero-rafting.jpg" alt="Exciting white water rafting scene">
+      <h1>White Water Rafting</h1>
+    </div>
+  </header>
+
+  <!-- Main Content for Contact Us Page -->
+  <main>
+    <!-- Company Information Section -->
+    <section class="company-info">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong> 123 River Road, Adventure City, Country</p>
+      <p><strong>Phone:</strong> (123) 456-7890</p>
+      <p><strong>Email:</strong> info@whitewaterrafting.com</p>
+      <!-- Embedded Google Map (remove inline border style) -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!2m12!3m3!1s0x0:0x0!2zMTIzIFJpdmVyIFJvYWQsIEFkdW50dXJlIENpdHksIENvdW50cnk!5e0!3m2!1sen!2sus!4v1581234567890" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Employee Profiles Section -->
+    <section class="employee-profiles">
+      <h2>Our Team</h2>
+      <div class="profiles-grid">
+        <figure>
+          <img src="./images/employee1.jpg" alt="Happy employee John Doe">
+          <figcaption>John Doe - Customer Support</figcaption>
+        </figure>
+        <figure>
+          <img src="./images/employee2.jpg" alt="Happy employee Jane Smith">
+          <figcaption>Jane Smith - Adventure Guide</figcaption>
+        </figure>
+        <figure>
+          <img src="./images/employee3.jpg" alt="Happy employee Mike Johnson">
+          <figcaption>Mike Johnson - Operations Manager</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="process_contact.php" method="post">
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" name="userName" required>
+        
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" name="userEmail" required>
+        
+        <p>Purpose of your message:</p>
+        <label>
+          <input type="radio" name="messagePurpose" value="general" required> General Inquiry
+        </label>
+        <label>
+          <input type="radio" name="messagePurpose" value="reservation"> Reservation Question
+        </label>
+        <label>
+          <input type="radio" name="messagePurpose" value="suggestion"> Website Suggestion
+        </label>
+        
+        <label for="userMessage">Message:</label>
+        <textarea id="userMessage" name="userMessage" rows="5" required></textarea>
+        
+        <label>
+          <input type="checkbox" name="subscribe" value="yes"> Please subscribe me to the monthly newsletter
+        </label>
+        
+        <button type="submit">Submit Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer (unchanged, plus wireframe link) -->
+  <footer>
+    <p>&copy; 2025 White Water Rafting | Developed by Lucas Miranda</p>
+    <div class="social">
+      <a href="https://facebook.com" target="_blank"><img src="./images/facebook.png" alt="Facebook Icon"></a>
+      <a href="https://twitter.com" target="_blank"><img src="./images/twitter.png" alt="Twitter Icon"></a>
+      <a href="https://instagram.com" target="_blank"><img src="./images/instagram.png" alt="Instagram Icon"></a>
+    </div>
+    <p><a href="images/wwr_contact_wireframe.png" target="_blank">View Contact Page Wireframe</a></p>
+  </footer>
+</body>
+</html>
