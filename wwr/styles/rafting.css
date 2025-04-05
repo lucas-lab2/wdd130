@@ -348,3 +348,14 @@
       top: 15% !important;
     }
   }
+  /* Wireframe Link Styling */
+.wireframe-link {
+  color: var(--dark-blue);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.wireframe-link:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
