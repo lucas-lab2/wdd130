@@ -24,14 +24,20 @@
     line-height: 1.5;
   }
   
-  h1, h2 {
+  h1,
+  h2 {
     font-family: "Winky Sans", sans-serif;
     color: var(--dark-blue);
     margin-bottom: 0.5rem;
   }
   
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
+  h1 { 
+    font-size: 2.5rem; 
+  }
+  
+  h2 { 
+    font-size: 2rem; 
+  }
   
   /* ==========================
      2. Header & Navigation
@@ -199,12 +205,20 @@
     padding: 2rem;
     margin: 2rem auto;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .company-info { max-width: 800px; }
-  .employee-profiles { max-width: 1000px; }
-  .contact-form { max-width: 800px; }
+  .company-info { 
+    max-width: 800px; 
+  }
+  
+  .employee-profiles { 
+    max-width: 1000px; 
+  }
+  
+  .contact-form { 
+    max-width: 800px; 
+  }
   
   .map-container iframe {
     width: 100%;
@@ -228,7 +242,7 @@
   .profiles-grid img {
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 0.5rem;
   }
   
@@ -308,7 +322,9 @@
      7. Responsive Adjustments
      ========================== */
   @media (max-width: 768px) {
-    .hero h1 { font-size: 1.8rem; }
+    .hero h1 { 
+      font-size: 1.8rem; 
+    }
     
     .profiles-grid,
     .history-grid {
@@ -316,7 +332,9 @@
       align-items: center;
     }
     
-    .contact-form button { width: 70%; }
+    .contact-form button { 
+      width: 70%; 
+    }
     
     .hero-overlay {
       flex-direction: column;
@@ -327,7 +345,9 @@
   }
   
   @media (max-width: 480px) {
-    nav a { font-size: 1rem; }
+    nav a { 
+      font-size: 1rem; 
+    }
     
     .company-info,
     .employee-profiles,
@@ -336,7 +356,9 @@
       margin: 1rem;
     }
     
-    .contact-form button { width: 90%; }
+    .contact-form button { 
+      width: 90%; 
+    }
     
     .hero-overlay {
       top: 55%;
@@ -348,14 +370,16 @@
       top: 15% !important;
     }
   }
+  
   /* Wireframe Link Styling */
-.wireframe-link {
-  color: var(--dark-blue);
-  text-decoration: underline;
-  transition: color 0.2s;
-}
-
-.wireframe-link:hover {
-  color: var(--accent-color);
-  text-decoration: none;
-}
+  .wireframe-link {
+    color: var(--dark-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .wireframe-link:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
