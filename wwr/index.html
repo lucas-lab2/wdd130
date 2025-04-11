@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Experience thrilling white water rafting adventures. Join our newsletter for updates, and discover amazing rafting trips on our site.">
+  <meta name="author" content="Lucas Miranda">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Water Rafting - Home</title>
+  <!-- Link to the common CSS file -->
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+  <!-- Header: Same across all pages -->
+  <header>
+    <div class="topnav">
+      <div class="logo">
+        <img src="./images/logo.png" alt="White Water Rafting Logo">
+      </div>
+      <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+
+    <!-- Full-width Hero Image with Positioned Heading -->
+    <div class="hero">
+      <img src="./images/hero-rafting.jpg" alt="Exciting white water rafting scene">
+      <!-- The heading is absolutely positioned via CSS (see rafting.css) -->
+      <h1>White Water Rafting</h1>
+      <!-- Optional overlay article to add extra text or imagery -->
+      <article class="hero-overlay">
+        <div class="hero-text">
+          <p>Feel the rush of adventure as you conquer the rapids. Your next unforgettable experience awaits!</p>
+        </div>
+        <div class="hero-img">
+          <img src="./images/happy_client.jpg" alt="Happy client enjoying rafting">
+        </div>
+      </article>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Newsletter Signup Form -->
+    <section class="newsletter">
+      <h2>Join Our Newsletter</h2>
+      <form action="process_newsletter.php" method="post">
+        <label for="newsletterName">Name:</label>
+        <input type="text" id="newsletterName" name="newsletterName" required>
+        
+        <label for="newsletterEmail">Email:</label>
+        <input type="email" id="newsletterEmail" name="newsletterEmail" required>
+        
+        <!-- Button text is more descriptive than "Submit" -->
+        <button type="submit">Sign Up for Updates</button>
+      </form>
+    </section>
+
+    <!-- Call to Action to visit the Trips page -->
+    <section class="cta">
+      <h2>Ready for Your Next Adventure?</h2>
+      <a href="trips.html" class="btn">Explore Our Trips</a>
+    </section>
+
+    <!-- CSS Grid Layout Section with Additional Images and Content -->
+    <section class="company-info-grid">
+      <h2>About Our Adventures</h2>
+      <!-- Wrap grid items in a container that is styled using CSS Grid -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="./images/rafting-adventure1.jpg" alt="Scenic view of rafting trip">
+          <h3>Thrilling Experiences</h3>
+          <p>Dive into a world of adrenaline and discover the beauty of nature with our expertly guided rafting adventures.</p>
+        </div>
+        <div class="grid-item">
+          <img src="./images/rafting-adventure2.jpg" alt="Expert rafting guide leading a group">
+          <h3>Expert Guides</h3>
+          <p>Our team of experienced guides ensures safety, excitement, and personalized service on every trip.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: Same across all pages -->
+  <footer>
+    <p>&copy; 2025 White Water Rafting | Developed by Lucas Miranda</p>
+    <div class="social">
+      <a href="https://facebook.com" target="_blank"><img src="./images/facebook.png" alt="Facebook Icon"></a>
+      <a href="https://twitter.com" target="_blank"><img src="./images/twitter.png" alt="Twitter Icon"></a>
+      <a href="https://instagram.com" target="_blank"><img src="./images/instagram.png" alt="Instagram Icon"></a>
+    </div>
+  </footer>
+</body>
+</html>
