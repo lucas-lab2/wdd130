@@ -82,23 +82,26 @@
         <label for="userEmail">Email:</label>
         <input type="email" id="userEmail" name="userEmail" required>
         
-        <!-- You might consider grouping these radio buttons in a fieldset for better semantics -->
         <p>Purpose of your message:</p>
-        <label>
-          <input type="radio" name="messagePurpose" value="general" required> General Inquiry
+        <label for="purposeGeneral">
+          <input type="radio" id="purposeGeneral" name="messagePurpose" value="general" required>
+          General Inquiry
         </label>
-        <label>
-          <input type="radio" name="messagePurpose" value="reservation"> Reservation Question
+        <label for="purposeReservation">
+          <input type="radio" id="purposeReservation" name="messagePurpose" value="reservation">
+          Reservation Question
         </label>
-        <label>
-          <input type="radio" name="messagePurpose" value="suggestion"> Website Suggestion
+        <label for="purposeSuggestion">
+          <input type="radio" id="purposeSuggestion" name="messagePurpose" value="suggestion">
+          Website Suggestion
         </label>
         
         <label for="userMessage">Message:</label>
         <textarea id="userMessage" name="userMessage" rows="5" required></textarea>
         
-        <label>
-          <input type="checkbox" name="subscribe" value="yes"> Please subscribe me to the monthly newsletter
+        <label for="subscribeNewsletter">
+          <input type="checkbox" id="subscribeNewsletter" name="subscribe" value="yes">
+          Please subscribe me to the monthly newsletter
         </label>
         
         <button type="submit">Submit Message</button>
